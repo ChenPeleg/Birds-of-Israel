@@ -1,11 +1,12 @@
-import React from 'react'
+import { React, useState } from 'react'
 import styles from './birdCardContainerLayout.module.scss';
 import getAllBirds from '../hoc/getbirdsdata';
 import BirdCard from '../components/bird-card';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+//import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const BirdCardContainerLayout = () => {
     //const bird1 = 'Bird 1';
+    const [lang, setLang] = useState('he');
     const classes = useStyles();
     const [...allBirds] = getAllBirds();
     console.log(allBirds)
@@ -27,7 +29,7 @@ const BirdCardContainerLayout = () => {
     // const styleObj = {
     //     height: '100px'
     // }
-    return (<div className={styles.birdcardlaout} >
+    return (<div dir={"rtl"} className={styles.birdcardlaout} >
         <div className={classes.root}>
             <Grid container spacing={3}>
                 {allBirds.map((bird) => {
