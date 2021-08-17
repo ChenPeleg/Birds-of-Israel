@@ -4,8 +4,7 @@ import BirdCardContainerLayout from './layouts/birrd-card-container-layout';
 
 function App() {
   return (
-    <div className="App"> 
-dfdf
+    <div className="app-background"> 
       <BirdCardContainerLayout/>
     </div>
   );

@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        margin: "1rem"
     },
     paper: {
         padding: theme.spacing(2),
@@ -33,13 +34,14 @@ const BirdCardContainerLayout = () => {
                     // eslint-disable-next-line no-lone-blocks
                     {
                         return (
+
                             <Grid key={bird.id} item xs={3}>
-                                <Paper className={classes.paper}>
+                                {/* <Paper className={classes.paper}> */}
 
 
-                                    <BirdCard bird={bird} key={bird.id}></BirdCard>
+                                <BirdCard bird={bird} key={bird.id}></BirdCard>
 
-                                </Paper>
+                                {/* </Paper> */}
                             </Grid>
 
 
