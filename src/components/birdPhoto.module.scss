@@ -1,4 +1,7 @@
 img.birdphoto {
     height: 120px;
+    @media (max-width: 700px) {
+        height: 80px;
+    }
     // width: 100px;
 }

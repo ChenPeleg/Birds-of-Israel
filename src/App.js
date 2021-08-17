@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import BirdCardContainerLayout from './layouts/birrd-card-container-layout';
 

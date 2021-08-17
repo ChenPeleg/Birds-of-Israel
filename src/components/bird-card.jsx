@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { Card, CardMedia, makeStyles } from '@material-ui/core';
 import BirdPhoto from "./birdPhoto";
-import BirdSound from "./birdSound";
 
 
 
@@ -42,11 +41,9 @@ const BirdCard = (props) => {
     return (<div>
         <Card raised={rais} className={classes.cardBase} height="30vh" onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
-            <BirdSound srcSound={props.bird.mainSound} />
 
-            {/* <Card color="primary"> */}
             <b>{props.bird.HebrewName} </b>
-            {/* </Card> */}
+
 
         </Card>
     </div>)
