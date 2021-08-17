@@ -1,8 +1,8 @@
 [
-    { "id" : 1, "Name": "Sparrow", "HebrewName" : "דרור" , "img" :"dror.jpg" ,"mainSound": "Blackbird.mp3" },
-    { "id" : 2, "Name": "Crow", "HebrewName" : "עורב" , "img" :"crow.jpg" ,"mainSound": "Blackbird.mp3"},
+    { "id" : 1, "Name": "Sparrow", "HebrewName" : "דרור" , "img" :"dror.jpg" ,"mainSound": "pashosh.mp3" },
+    { "id" : 2, "Name": "Crow", "HebrewName" : "עורב" , "img" :"crow.jpg" ,"mainSound": "crow.mp3"},
     { "id" : 3, "Name": "Robin", "HebrewName" : "שחרור", "img" :"shahrur.jpg" ,"mainSound": "Blackbird.mp3"},
-    { "id" : 4, "Name": "Woodpekker", "HebrewName" : "נקר" , "img" :"nakar.jpg" ,"mainSound": "Blackbird.mp3"},
-    { "id" : 5, "Name": "Drrara", "HebrewName" : "דררה", "img" :"drara.jpg" ,"mainSound": "Blackbird.mp3" },
-    { "id" : 6, "Name": "Sparrow", "HebrewName" : "פשוש", "img" :"pashosh.jpg" ,"mainSound": "Blackbird.mp3" }
+    { "id" : 4, "Name": "Woodpekker", "HebrewName" : "נקר" , "img" :"nakar.jpg" ,"mainSound": "SyrianWoodpecker.mp3"},
+    { "id" : 5, "Name": "Drrara", "HebrewName" : "דררה", "img" :"drara.jpg" ,"mainSound": "drara.mp3" },
+    { "id" : 6, "Name": "Sparrow", "HebrewName" : "פשוש", "img" :"pashosh.jpg" ,"mainSound": "pashosh.mp3" }
 ]
