@@ -1,8 +1,8 @@
 [
-    { "id" : 1, "Name": "Sparrow", "HebrewName" : "דרור" },
-    { "id" : 2, "Name": "Crow", "HebrewName" : "עורב" },
-    { "id" : 3, "Name": "Robin", "HebrewName" : "אדום חזה"},
-    { "id" : 4, "Name": "Woodpekker", "HebrewName" : "נקר" },
-    { "id" : 5, "Name": "Drrara", "HebrewName" : "דררה" },
-    { "id" : 6, "Name": "Sparrow", "HebrewName" : "פשוש" }
+    { "id" : 1, "Name": "Sparrow", "HebrewName" : "דרור" , "img" :"crow.jpj"},
+    { "id" : 2, "Name": "Crow", "HebrewName" : "עורב" , "img" :"crow.jpj"},
+    { "id" : 3, "Name": "Robin", "HebrewName" : "אדום חזה", "img" :"crow.jpj"},
+    { "id" : 4, "Name": "Woodpekker", "HebrewName" : "נקר" , "img" :"crow.jpj"},
+    { "id" : 5, "Name": "Drrara", "HebrewName" : "דררה", "img" :"crow.jpj" },
+    { "id" : 6, "Name": "Sparrow", "HebrewName" : "פשוש", "img" :"crow.jpj" }
 ]

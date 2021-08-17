@@ -2,16 +2,19 @@ import React from "react";
 import Box from '@material-ui/core/Box';
 
 
-import { Card } from '@material-ui/core';
+import { Card, CardMedia } from '@material-ui/core';
+import BirdPhoto from "./birdPhoto";
 
 const BirdCard = (props) => {
     return (<div>
-        <Box height="30vh">
+        <Card height="30vh">
+            <CardMedia><BirdPhoto imageSource={props.bird.image} /> </CardMedia>
+
             {/* <Card color="primary"> */}
             <b>{props.bird.HebrewName} </b>
             {/* </Card> */}
 
-        </Box>
+        </Card>
     </div>)
 }
 export default BirdCard

@@ -33,7 +33,7 @@ const BirdCardContainerLayout = () => {
                     // eslint-disable-next-line no-lone-blocks
                     {
                         return (
-                            <Grid item xs={3}>
+                            <Grid key={bird.id} item xs={3}>
                                 <Paper className={classes.paper}>
 
 
