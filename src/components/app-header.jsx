@@ -24,10 +24,10 @@ const AppHeader = () => {
         <h2>     קולות הציפורים בארץ ישראל</h2>
         <Box >
 
-            <span id='hebrew' className={classes.langSpan + " " + lang === 'עב' ? classes.choosenLang : null}>
+            <span id='hebrew' className={`${classes.langSpan} ${lang === 'עב' ? classes.choosenLang : null}`} onClick={() => setLang('עב')} >
                 עב
             </span> &nbsp;
-            <span id='english' className={classes.langSpan + " " + lang === 'EN' ? classes.choosenLang : null} onClick={setLang('EN')}>
+            <span id='english' className={`${classes.langSpan} ${lang === 'EN' ? classes.choosenLang : null}`} onClick={() => setLang('EN')}>
                 EN
             </span>
         </Box>
