@@ -40,7 +40,7 @@ const BirdCardContainerLayout = () => {
             <AppHeader />
             <Grid container spacing={3} className={classes.gridclass}>
                 {allBirds.map((bird) => {
-                    return (<Grid key={bird.id} item m={4} xs={20}>
+                    return (<Grid key={bird.id} item m={4} xs={2.5}>
                         <BirdCard bird={bird} key={bird.id}></BirdCard>
                     </Grid>
                     )
