@@ -1,6 +1,8 @@
 const initialState = {
     Language: 'he',
-    lang: 'עב'
+    lang: 'עב',
+    filePlaying : null,
+    isPlaying : false
 }
 
 const reducer = (state = initialState, action) => {
