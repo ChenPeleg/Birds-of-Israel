@@ -16,6 +16,7 @@ const useStyles = makeStyles(
     })
 )
 
+/**  @param {any} [props] - Somebody's name.  @param {string}  p1  @returns {JSX.Element} */
 const AppHeader = (props) => {
 
     const lang = useSelector(state => state.lang);

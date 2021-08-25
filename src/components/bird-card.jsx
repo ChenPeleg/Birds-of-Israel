@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import { Card, CardMedia, makeStyles } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+
 import BirdPhoto from "./birdPhoto";
 
 
@@ -30,7 +32,7 @@ const clickHandler = (fileSrc) => {
 
 const BirdCard = (props) => {
     const [rais, setRaise] = useState(false);
-
+    //  const lang = useSelector(state => state.lang);
     const mouseEneter = () => {
         setRaise(true)
     }
