@@ -3,7 +3,7 @@ import getAllBirds from '../hoc/getbirdsdata';
 import BirdCard from '../components/bird-card';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import AppHeader from '../components/app-header';
+import AppHeader from '../components/app-header.tsx';
 
 
 const useStyles = makeStyles((theme) => ({

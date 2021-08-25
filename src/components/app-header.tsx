@@ -1,10 +1,11 @@
-import React from "react";
-import { Box } from "@material-ui/core";
+import React, { Dispatch } from "react";
+import { Box, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+//import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 
-const useStyles = makeStyles(
-    (theme) => ({
+const useStyles: any = makeStyles(
+    (theme: Theme) => ({
         langSpan: {
             fontWeight: "bold",
             cursor: "pointer"
@@ -17,10 +18,10 @@ const useStyles = makeStyles(
 )
 
 /**  @param {any} [props] - Somebody's name.  @param {string}  p1  @returns {JSX.Element} */
-const AppHeader = (props) => {
+const AppHeader = (): JSX.Element => {
 
-    const lang = useSelector(state => state.lang);
-    const dispatch = useDispatch();
+    const lang = useSelector((state: { lang: string }) => state.lang);
+    const dispatch: Dispatch<any> = useDispatch();
     const classes = useStyles();
     return (<Box flexDirection="row" display="flex" alignItems="center" justifyContent="space-around">
 
@@ -36,16 +37,5 @@ const AppHeader = (props) => {
         </Box>
     </Box>)
 }
-// const mapStateToProps = state => {
-//     return {
-//         lang: state.lang
-//     }
-// }
-// const mapDispatchToProps = dispactch => {
-//     return {
-//         onChangeToHeb: () => dispactch({ type: "LANG_HEB" }),
-//         onChangeToEN: () => dispactch({ type: "LANG_EN" })
-//     }
-// }
+
 export default AppHeader
-//export default connect(mapStateToProps, mapDispatchToProps)(AppHeader)
