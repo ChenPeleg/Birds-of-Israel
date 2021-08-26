@@ -2,7 +2,8 @@ const initialState = {
     Language: 'he',
     lang: 'עב',
     filePlaying : null,
-    isPlaying : false
+    isPlaying : false,
+    playingBirdId : null
 }
 
 const reducer = (state = initialState, action) => {
