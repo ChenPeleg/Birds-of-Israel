@@ -27,7 +27,7 @@ const loadSound = fileName => (assets(`./${fileName}`).default);
 const clickHandler = (fileSrc) => {
     // alert(fileSrc.mainSound)
     const BirdSound = new Audio(loadSound(fileSrc.mainSound));
-    BirdSound.play();
+    // BirdSound.play();
 }
 
 const BirdCard = (props) => {

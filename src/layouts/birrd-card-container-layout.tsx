@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import AppHeader from '../components/app-header';
 import Bird from '../models/bird.model'
+import PlayerComponent from '../components/playerComponenet';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +43,7 @@ const BirdCardContainerLayout = () => {
     return (
         <div dir={"rtl"} className={classes.mainContainer}>
             <AppHeader />
+            <PlayerComponent />
             <Grid container spacing={3} className={classes.gridclass}>
                 {allBirds.map((bird) => {
                     return (<Grid key={bird.id} item md={2} sm={4} xs={5}>
