@@ -32,7 +32,7 @@ const PlayerComponent = () => {
 
 
     return (<div className={classes.root}>
-        {choosenBird ? <audio src={mp3Src(choosenBird.mainSound)} onPlay={onPlay} onAbort={onAbort} /> : null}
+        {choosenBird ? <audio controls src={mp3Src(choosenBird.mainSound)} onPlay={onPlay} onAbort={onAbort} ><source src="horse.ogg" type="audio/ogg" /> </audio> : null}
     </div>)
 
 

@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Card, CardMedia, makeStyles } from '@material-ui/core';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import BirdPhoto from "./birdPhoto";
 
@@ -21,18 +21,19 @@ const useStyles = makeStyles((theme) => ({
         // }
     }
 }))
-const assets = require.context('../assets/sounds', true);
-const loadSound = fileName => (assets(`./${fileName}`).default);
 
-const clickHandler = (fileSrc) => {
-    // alert(fileSrc.mainSound)
-    const BirdSound = new Audio(loadSound(fileSrc.mainSound));
-    // BirdSound.play();
-}
+
+
 
 const BirdCard = (props) => {
     const [rais, setRaise] = useState(false);
     const lang = useSelector(state => state.lang);
+
+    const dispatch = useDispatch();
+
+    const clickHandler = (bird) => {
+        dispatch({ type: "CLICK_BIRD", id: bird.id })
+    }
     const mouseEneter = () => {
         setRaise(true)
     }
@@ -47,7 +48,7 @@ const BirdCard = (props) => {
         <Card raised={rais} className={classes.cardBase} height="30vh" onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
 
-            <b>{birdNameInChoosenLang} </b>
+            <b>{birdNameInChoosenLang} </b> {props.bird.isChoosen ? 'Choosen' : null}
 
 
         </Card>

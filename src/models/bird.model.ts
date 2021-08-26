@@ -3,5 +3,6 @@ export default interface Bird {
     "Name": string,
     "HebrewName": string,
     "img": string,
-    "mainSound": string
+    "mainSound": string,
+    "isChoosen"?: boolean
 }
