@@ -32,7 +32,7 @@ const clickHandler = (fileSrc) => {
 
 const BirdCard = (props) => {
     const [rais, setRaise] = useState(false);
-    //  const lang = useSelector(state => state.lang);
+    const lang = useSelector(state => state.lang);
     const mouseEneter = () => {
         setRaise(true)
     }
@@ -40,12 +40,14 @@ const BirdCard = (props) => {
         setRaise(false)
     }
     const classes = useStyles();
+
+    const birdNameInChoosenLang = lang === 'EN' ? props.bird.Name : props.bird.HebrewName
     return (<div>
 
         <Card raised={rais} className={classes.cardBase} height="30vh" onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
 
-            <b>{props.bird.HebrewName} </b>
+            <b>{birdNameInChoosenLang} </b>
 
 
         </Card>

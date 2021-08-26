@@ -1,4 +1,4 @@
-export interface BirdModel {
+export default interface Bird {
     "id": number,
     "Name": string,
     "HebrewName": string,
