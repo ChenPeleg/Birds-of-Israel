@@ -1,5 +1,5 @@
 import Bird from "../models/bird.model"
-import getAllBirds from '../hoc/getbirdsdata.js'
+import getAllBirds from '../hoc/getbirdsdata'
 import { Language } from "../models/languageEnumb";
 interface BirdStore {
     Language: Language,
@@ -42,7 +42,7 @@ const reducer = (state = initialState, action: any) => {
                 let copiedBird = { ...bird }
                 if (action.id === copiedBird.id) {
                     copiedBird.isChoosen = true;
-                    newState.choosenBird = bird
+                    newState.choosenBird = bird;
                 } else {
                     copiedBird.isChoosen = false
                 }
@@ -51,12 +51,13 @@ const reducer = (state = initialState, action: any) => {
             break;
         case "SET_CURRENT_AUDIO_REF":
             newState.audioElement = action.audioElement
+            newState.filePlaying = action.filePlaying
             break;
         default:
             break;
 
     }
-    console.log(newState)
+
     return newState
 }
 
