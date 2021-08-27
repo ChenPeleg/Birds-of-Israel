@@ -4,5 +4,6 @@ export default interface Bird {
     "HebrewName": string,
     "img": string,
     "mainSound": string,
-    "isChoosen"?: boolean
+    "isChoosen"?: boolean,
+    "info"?: { "EN": string, "HE": string }
 }

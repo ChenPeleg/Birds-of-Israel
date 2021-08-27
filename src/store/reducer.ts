@@ -1,7 +1,8 @@
 import Bird from "../models/bird.model"
 import getAllBirds from '../hoc/getbirdsdata.js'
+import { Language } from "../models/languageEnumb";
 interface BirdStore {
-    Language: 'en' | 'he',
+    Language: Language,
     lang: 'עב' | 'EN',
     filePlaying: string | null,
     isPlaying: boolean,
@@ -12,7 +13,7 @@ interface BirdStore {
 const [...allBirds]: Bird[] = getAllBirds();
 
 const initialState: BirdStore = {
-    Language: 'he',
+    Language: Language.he,
     lang: 'עב',
     filePlaying: null,
     isPlaying: false,
