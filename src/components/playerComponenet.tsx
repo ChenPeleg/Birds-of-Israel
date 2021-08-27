@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react'
+import React, { Dispatch, useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Bird from '../models/bird.model'
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,23 +16,35 @@ const PlayerComponent = () => {
     const classes = useStyles();
 
 
-    const onPlay = (second: any) => {
-        // Store song current time in the Store on each one second
-        dispatch({ type: 'SET_CURRENT_SECOND', second });
+    const onPlay = (audioElement: HTMLAudioElement) => {
+
+        dispatch({ type: 'SET_CURRENT_AUDIO_REF', audioElement: audioElement });
     }
 
     const onAbort = (seconds: any) => {
-        // Rewind song current time
-        dispatch({ type: 'REWIND_CURRENT_SECOND', seconds });
+
+        dispatch({ type: 'CURRENT_AUDIO_STOPPED', seconds });
     }
 
-    const assets = require.context('../assets/sounds', true);
-    const mp3Src = (fileName: string) => (assets(`./${fileName}`).default);
+
+    if (choosenBird) {
+        const assets = require.context('../assets/sounds', true);
+        const loadSound = (fileName: string) => (assets(`./${fileName}`).default);
+        const BirdSound: HTMLAudioElement = new Audio(loadSound(choosenBird.mainSound));
+        BirdSound.play().then(_ => {
+            onPlay(BirdSound)
+        });
+    }
+
+
 
 
 
     return (<div className={classes.root}>
-        {choosenBird ? <audio controls src={mp3Src(choosenBird.mainSound)} onPlay={onPlay} onAbort={onAbort} ><source src="horse.ogg" type="audio/ogg" /> </audio> : null}
+
+        {/* {choosenBird ? <audio controls autoPlay onPlay={onPlay} onAbort={onAbort} ><source src={birdSoundSrc} ref={audioRef} /> </audio> : null} */}
+
+        {choosenBird ? choosenBird.HebrewName : null}
     </div>)
 
 

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export const BirdCard = (props: any) => {
+export const BirdCard = (props: { bird: Bird }) => {
     const [rais, setRaise] = useState(false);
     const lang = useSelector((state: { lang: any }) => state.lang);
 
@@ -44,6 +44,7 @@ export const BirdCard = (props: any) => {
     const classes = useStyles();
 
     const birdNameInChoosenLang = lang === 'EN' ? props.bird.Name : props.bird.HebrewName
+    const birdDescritionChoosenLang = lang === 'EN' ? props.bird.description?.en : props.bird.description?.he
     return (<div>
 
         <Card raised={rais} className={classes.cardBase}
@@ -51,7 +52,7 @@ export const BirdCard = (props: any) => {
             onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
 
-            <b>{birdNameInChoosenLang} </b> {props.bird.isChoosen ? 'Choosen' : null}
+            <b>{birdNameInChoosenLang} </b> {props.bird.isChoosen ? birdDescritionChoosenLang : null}
 
 
         </Card>

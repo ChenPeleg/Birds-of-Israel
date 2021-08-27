@@ -47,12 +47,11 @@ const BirdCardContainerLayout = () => {
             <AppHeader />
             <PlayerComponent />
             <Grid container spacing={3} className={classes.gridclass}>
-                {allBirds.map((bird) => {
+                {allBirds.map((bird: Bird) => {
                     return (<Grid key={bird.id} item md={2} sm={4} xs={5}>
                         <BirdCard bird={bird} key={bird.id}></BirdCard>
                     </Grid>
                     )
-
                 })}
             </Grid>  </div>)
 

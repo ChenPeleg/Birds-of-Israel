@@ -4,48 +4,64 @@
         "Name": "Sparrow",
         "HebrewName": "דרור",
         "img": "dror.jpg",
-        "mainSound": "pashosh.mp3"
+        "mainSound": "pashosh.mp3",
+        "description" : {"he" : "'מקור עבה המותאם לאכילת זרעים נמצא בקרבת בתים",
+            "en": "common around man residents"
+        }
     },
     {
         "id": 2,
         "Name": "Crow",
         "HebrewName": "עורב",
         "img": "crow.jpg",
-        "mainSound": "crow.mp3"
+        "mainSound": "crow.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"
+        }
     },
     {
         "id": 3,
         "Name": "Robin",
         "HebrewName": "שחרור",
         "img": "shahrur.jpg",
-        "mainSound": "Blackbird.mp3"
+        "mainSound": "Blackbird.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"}
     },
     {
         "id": 4,
         "Name": "Woodpekker",
         "HebrewName": "נקר",
         "img": "nakar.jpg",
-        "mainSound": "SyrianWoodpecker.mp3"
+        "mainSound": "SyrianWoodpecker.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"}
     },
     {
         "id": 5,
         "Name": "Drrara",
         "HebrewName": "דררה",
         "img": "drara.jpg",
-        "mainSound": "drara.mp3"
+        "mainSound": "drara.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"}
     },
     {
         "id": 6,
         "Name": "Sparrow",
         "HebrewName": "פשוש",
         "img": "pashosh.jpg",
-        "mainSound": "pashosh.mp3"
+        "mainSound": "pashosh.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"}
     },
     {
         "id": 7,
         "Name": "barnSwallow",
         "HebrewName": "סנונית רפתות",
         "img": "barnSwallow.jpg",
-        "mainSound": "BarnSwallow.mp3"
+        "mainSound": "BarnSwallow.mp3",
+        "description" : {"he" : "נמצא בקרבת בתים",
+            "en": "common around man residents"}
     }
 ]
