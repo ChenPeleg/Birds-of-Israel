@@ -1,11 +1,12 @@
 import React from 'react'
-import BirdCard from '../components/bird-card';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import AppHeader from '../components/app-header';
 import Bird from '../models/bird.model'
 import PlayerComponent from '../components/playerComponenet';
 import { useSelector } from 'react-redux';
+import { BirdCard } from '../components/bird-card';
 
 
 const useStyles = makeStyles((theme) => ({
