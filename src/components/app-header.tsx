@@ -2,6 +2,7 @@ import React, { Dispatch } from "react";
 import { Box, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
+import StopButton from "./stop-button";
 //import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 
 const useStyles: any = makeStyles(
@@ -26,6 +27,7 @@ const AppHeader = (): JSX.Element => {
     return (<Box flexDirection="row" display="flex" alignItems="center" justifyContent="space-around">
 
         <h2>     קולות הציפורים בארץ ישראל</h2>
+        <StopButton></StopButton>
         <Box >
 
             <span id='hebrew' className={`${classes.langSpan} ${lang === 'עב' ? classes.choosenLang : null}`} onClick={() => dispatch({ type: "LANG_HEB" })} >
