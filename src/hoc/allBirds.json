@@ -6,7 +6,7 @@
         "img": "dror.jpg",
         "mainSound": "pashosh.mp3",
         "description" : {"he" : "'מקור עבה המותאם לאכילת זרעים נמצא בקרבת בתים",
-            "en": "common around man residents"
+            "en": "A thick beak adapted for eating seeds. Located near houses"
         }
     },
     {
@@ -15,18 +15,18 @@
         "HebrewName": "עורב",
         "img": "crow.jpg",
         "mainSound": "crow.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"
+        "description" : {"he" : "הם אוכלי כל, אך הם מעדיפים בשר, ובמיוחד נבלות. העורבים הם בעלי חיים חברותיים, ולעיתים נאספים לקבוצות גדולות, אך אינם יוצרים מושבות. כל זוג עורבים מקים לעצמו קן, הנקבה דוגרת על הביצים ושני בני הזוג מאכילים את הגוזלים.",
+            "en": "They are omnivores, but they prefer meat, and especially carcasses. Crows are sociable animals, and are often collected in large groups, but do not form colonies. Each pair of crows establishes a nest for itself, the female incubates the eggs and both mates feed the chicks."
         }
     },
     {
         "id": 3,
-        "Name": "Robin",
+        "Name": "Blackbird",
         "HebrewName": "שחרור",
         "img": "shahrur.jpg",
         "mainSound": "Blackbird.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"}
+        "description" : {"he" : "השחרור ניזון מפרוקי-רגליים ומתולעים, וכן מזרעים וגרגרים.",
+            "en": "The release feeds on arthropods and worms, as well as seeds and grains."}
     },
     {
         "id": 4,
@@ -34,34 +34,34 @@
         "HebrewName": "נקר",
         "img": "nakar.jpg",
         "mainSound": "SyrianWoodpecker.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"}
+        "description" : {"he" : "מוצא את רוב מזונו בגזעי עצים זקנים ורקובים, שגם משמשים לו כאתרי קינון.",
+            "en": "Finds most of its food in old, rotten tree trunks, which also serve as nesting sites for it."}
     },
     {
         "id": 5,
-        "Name": "Drrara",
+        "Name": "Drara",
         "HebrewName": "דררה",
         "img": "drara.jpg",
         "mainSound": "drara.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"}
+        "description" : {"he" : "ניזונות מחלקי צמחים שונים, כגון זרעים, גרגרים, פירות, פקאנים.",
+            "en": "Feed on various plant parts, such as seeds, berries, fruits, pecans."}
     },
     {
         "id": 6,
-        "Name": "Sparrow",
+        "Name": "Graceful prinia",
         "HebrewName": "פשוש",
         "img": "pashosh.jpg",
         "mainSound": "pashosh.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"}
+        "description" : {"he" : "מהקטנים בעופות הנמצאים בישראל. תפריטו  כולל בעיקר חרקים קטנים, אך גם חסרי חוליות אחרים, זרעים ופירות.",
+            "en": "One of the smallest birds in Israel. Its menu includes mainly small insects, but also other invertebrates, seeds and fruits."}
     },
     {
         "id": 7,
-        "Name": "barnSwallow",
+        "Name": "Barn Swallow",
         "HebrewName": "סנונית רפתות",
         "img": "barnSwallow.jpg",
         "mainSound": "BarnSwallow.mp3",
-        "description" : {"he" : "נמצא בקרבת בתים",
-            "en": "common around man residents"}
+        "description" : {"he" : "הסנונית היא טייסת מעולה: היא יכולה לשהות זמן רב באוויר, והיא אף תופסת חרקים ושותה מים תוך כדי תעופה. ההזדווגות יכולה להתקיים על הקרקע ובאוויר כאחד.",
+            "en": "The Swallow is an excellent squadron: it can stay in the air for a long time, and it even catches insects and drinks water while flying. Mating can take place on the ground and in the air alike."}
     }
 ]
