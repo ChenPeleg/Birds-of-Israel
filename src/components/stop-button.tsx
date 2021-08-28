@@ -24,7 +24,8 @@ const StopButton = (): JSX.Element => {
     const choosenBird: Bird = useSelector((state: { choosenBird: Bird }) => state.choosenBird);
     const dispatch: Dispatch<any> = useDispatch();
     const onClickHandler = () => {
-        dispatch({ type: "STOP_SOUND" })
+        const birdId = choosenBird?.id || 0;
+        dispatch({ type: "STOP_SOUND", id: birdId })
     }
     const birdName: string = language === Language.en ? choosenBird?.Name : choosenBird?.HebrewName
     const classes = useStyles();

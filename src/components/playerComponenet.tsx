@@ -28,6 +28,9 @@ const PlayerComponent = () => {
     const choosenBird: Bird = useSelector((state: { choosenBird: Bird }) => state.choosenBird);
     // const previosAudioElement: HTMLAudioElement = useSelector((state: { audioElement: HTMLAudioElement }) => state.audioElement);
     const filePlaying = useSelector((state: { filePlaying: string }) => state.filePlaying);
+
+    const stopBirdId = useSelector((state: { stopBirdId: number }) => state.stopBirdId);
+
     const dispatch: Dispatch<any> = useDispatch();
 
     const classes = useStyles();
@@ -51,6 +54,13 @@ const PlayerComponent = () => {
         if (audioToPlay?.audioElement) {
             audioToPlay.audioElement.play();
         }
+    } else if (stopBirdId !== 0) {
+        allBirdsAudio.forEach((birdAudio: BirdAudio) => {
+            if (!birdAudio.audioElement.paused && birdAudio.birdId === stopBirdId) {
+                birdAudio.audioElement.pause();
+                dispatch({ type: "SOUND_STOPED" })
+            }
+        })
     }
 
 

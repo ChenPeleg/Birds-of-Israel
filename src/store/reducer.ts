@@ -9,7 +9,8 @@ interface BirdStore {
     isPlaying: boolean,
     choosenBird: Bird | null,
     allBirds: Bird[],
-    audioElement: HTMLAudioElement | null
+    audioElement: HTMLAudioElement | null,
+    stopBirdId: number
 }
 
 const [...allBirds]: Bird[] = getAllBirds();
@@ -22,7 +23,8 @@ const initialState: BirdStore = {
     isPlaying: false,
     choosenBird: null,
     allBirds: allBirds,
-    audioElement: null
+    audioElement: null,
+    stopBirdId: 0
 }
 
 
@@ -55,11 +57,12 @@ const reducer = (state = initialState, action: any) => {
                 return copiedBird
             })
             break;
-        case "SET_CURRENT_AUDIO_REF":
-            newState.audioElement = action.audioElement
-            newState.filePlaying = action.filePlaying
-            break;
+
         case "STOP_SOUND":
+            newState.stopBirdId = action.id
+            break;
+        case "SOUND_STOPED":
+            newState.stopBirdId = 0;
             break;
         default:
             break;
