@@ -11,7 +11,8 @@ import { translate } from "../hoc/translateService";
 const useStyles: any = makeStyles(
     (theme: Theme) => ({
         Button: {
-            background: 'ccddaa#'
+            background: 'ccddaa#',
+            transition: "opacity 200ms ease-in-out"
         },
 
     })
@@ -21,6 +22,7 @@ const useStyles: any = makeStyles(
 const StopButton = (): JSX.Element => {
 
     const language = useSelector((state: { language: Language }) => state.language);
+    const isPlaying = useSelector((state: { isPlaying: Language }) => state.isPlaying);
     const choosenBird: Bird = useSelector((state: { choosenBird: Bird }) => state.choosenBird);
     const dispatch: Dispatch<any> = useDispatch();
     const onClickHandler = () => {
@@ -30,7 +32,7 @@ const StopButton = (): JSX.Element => {
     const birdName: string = language === Language.en ? choosenBird?.Name : choosenBird?.HebrewName
     const classes = useStyles();
     return (<Box flexDirection="row" display="flex" alignItems="center" justifyContent="space-around">
-        <Button color={'primary'} onClick={() => onClickHandler()} variant="contained" className={classes.Button}> <Stop  ></Stop> {choosenBird ? birdName : null}</Button>
+        <Button color={'primary'} style={{ "opacity": isPlaying ? 1 : 0 }} onClick={() => onClickHandler()} variant="contained" className={classes.Button}> <Stop  ></Stop> {choosenBird ? birdName : null}</Button>
     </Box>)
 }
 

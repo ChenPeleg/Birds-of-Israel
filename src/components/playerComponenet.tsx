@@ -41,9 +41,14 @@ const PlayerComponent = () => {
     // const onAbort = (seconds: any) => {
     //     dispatch({ type: 'CURRENT_AUDIO_STOPPED', seconds });
     // }
-
-
-    if (choosenBird && filePlaying !== choosenBird.mainSound) {
+    if (stopBirdId !== 0) {
+        allBirdsAudio.forEach((birdAudio: BirdAudio) => {
+            if (!birdAudio.audioElement.paused && birdAudio.birdId === stopBirdId) {
+                birdAudio.audioElement.pause();
+                dispatch({ type: "SOUND_STOPED" })
+            }
+        })
+    } else if (choosenBird && filePlaying !== choosenBird.mainSound) {
 
         allBirdsAudio.forEach((birdAudio: BirdAudio) => {
             if (!birdAudio.audioElement.paused && birdAudio.birdId !== choosenBird.id) {
@@ -52,16 +57,12 @@ const PlayerComponent = () => {
         })
         const audioToPlay: BirdAudio | undefined = allBirdsAudio.find((birdAudio: BirdAudio) => birdAudio.birdId === choosenBird.id);
         if (audioToPlay?.audioElement) {
-            audioToPlay.audioElement.play();
+            audioToPlay.audioElement.play().then(_ => {
+                dispatch({ type: "STARTED_PLAYING", filePlaying: choosenBird.mainSound })
+            });
         }
-    } else if (stopBirdId !== 0) {
-        allBirdsAudio.forEach((birdAudio: BirdAudio) => {
-            if (!birdAudio.audioElement.paused && birdAudio.birdId === stopBirdId) {
-                birdAudio.audioElement.pause();
-                dispatch({ type: "SOUND_STOPED" })
-            }
-        })
     }
+
 
 
 

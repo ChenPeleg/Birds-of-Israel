@@ -57,12 +57,17 @@ const reducer = (state = initialState, action: any) => {
                 return copiedBird
             })
             break;
-
+        case "STARTED_PLAYING":
+            newState.filePlaying = action.filePlaying;
+            newState.isPlaying = true;
+            break;
         case "STOP_SOUND":
             newState.stopBirdId = action.id
             break;
         case "SOUND_STOPED":
             newState.stopBirdId = 0;
+            newState.isPlaying = false;
+
             break;
         default:
             break;
