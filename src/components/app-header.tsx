@@ -15,7 +15,10 @@ const useStyles: any = makeStyles(
         },
         choosenLang: {
             textDecoration: "underline",
-
+        },
+        mainHeader: {
+            marginTop: "0px",
+            marginBottom: "0px"
         }
     })
 )
@@ -26,18 +29,20 @@ const AppHeader = (): JSX.Element => {
     const language = useSelector((state: { language: Language }) => state.language);
     const dispatch: Dispatch<any> = useDispatch();
     const classes = useStyles();
-    return (<Box flexDirection="row" display="flex" alignItems="center" justifyContent="space-around" dir={'rtl'}>
+    return (<Box flexDirection="row" flexWrap="wrap" display="flex" alignItems="center" justifyContent="space-around" dir={'rtl'}>
 
-        <h2>  {translate(language, "header")}</h2>
-        <StopButton></StopButton>
-        <Box >
+        <h2 className={classes.mainHeader}>  {translate(language, "header")}</h2>
+        <Box flexDirection="row" flexGrow="4" display="flex" justifyContent="space-around">
+            <StopButton></StopButton>
+            <Box margin={'20px'} >
 
-            <span id='hebrew' className={`${classes.langSpan} ${language === Language.he ? classes.choosenLang : null}`} onClick={() => dispatch({ type: "LANG_HEB" })} >
-                עב
-            </span> &nbsp;
-            <span id='english' className={`${classes.langSpan} ${language === Language.en ? classes.choosenLang : null}`} onClick={() => dispatch({ type: "LANG_EN" })}>
-                EN
-            </span>
+                <span id='hebrew' className={`${classes.langSpan} ${language === Language.he ? classes.choosenLang : null}`} onClick={() => dispatch({ type: "LANG_HEB" })} >
+                    עב
+                </span> &nbsp;
+                <span id='english' className={`${classes.langSpan} ${language === Language.en ? classes.choosenLang : null}`} onClick={() => dispatch({ type: "LANG_EN" })}>
+                    EN
+                </span>
+            </Box>
         </Box>
     </Box>)
 }

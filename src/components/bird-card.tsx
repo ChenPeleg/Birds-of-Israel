@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center'
 
-        // "&:hover, &:focus": {
-        //     boxShadow: "mat"
-        // }
+    },
+    additionalText: {
+        fontSize: "14px"
     }
 }))
 
@@ -53,7 +53,9 @@ export const BirdCard = (props: { bird: Bird }) => {
             onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
 
-            <b>{birdNameInChoosenLang} </b> {props.bird.isChoosen ? birdDescritionChoosenLang : null}
+            <b>{birdNameInChoosenLang} </b>
+            <div className={classes.additionalText}> {props.bird.isChoosen ? birdDescritionChoosenLang : null}
+            </div>
 
 
         </Card>
