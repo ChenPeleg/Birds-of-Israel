@@ -1,7 +1,11 @@
-import allBirds from './allBirds.json'
+import appData from './appData.json'
 
 const getAllBirds = (): any[] => {
-    return [...allBirds];
+    return [...appData.allBirds];
 }
 
 export default getAllBirds;
+
+
+
+

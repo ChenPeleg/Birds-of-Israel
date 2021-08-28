@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { BirdPhoto } from "./birdPhoto";
 import Bird from "../models/bird.model";
+import { Language } from "../models/languageEnumb";
 
 
 
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const BirdCard = (props: { bird: Bird }) => {
     const [rais, setRaise] = useState(false);
-    const lang = useSelector((state: { lang: any }) => state.lang);
+    const language = useSelector((state: { language: Language }) => state.language);
 
     const dispatch = useDispatch();
 
@@ -43,8 +44,8 @@ export const BirdCard = (props: { bird: Bird }) => {
     }
     const classes = useStyles();
 
-    const birdNameInChoosenLang = lang === 'EN' ? props.bird.Name : props.bird.HebrewName
-    const birdDescritionChoosenLang = lang === 'EN' ? props.bird.description?.en : props.bird.description?.he
+    const birdNameInChoosenLang = language === Language.en ? props.bird.Name : props.bird.HebrewName
+    const birdDescritionChoosenLang = language === Language.en ? props.bird.description?.en : props.bird.description?.he
     return (<div>
 
         <Card raised={rais} className={classes.cardBase}

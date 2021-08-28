@@ -1,3 +1,5 @@
+
+{"allBirds":
 [
     {
         "id": 1,
@@ -64,4 +66,15 @@
         "description" : {"he" : "הסנונית היא טייסת מעולה: היא יכולה לשהות זמן רב באוויר, והיא אף תופסת חרקים ושותה מים תוך כדי תעופה. ההזדווגות יכולה להתקיים על הקרקע ובאוויר כאחד.",
             "en": "The Swallow is an excellent squadron: it can stay in the air for a long time, and it even catches insects and drinks water while flying. Mating can take place on the ground and in the air alike."}
     }
-]
+],
+"languageStrings" : {
+"header" : {
+    "he" : "קולות הציפורים בארץ ישראל",
+    "en" : "Birds sounds of Israel"
+},
+"CopyRight" : {
+    "he" : "   כל הזכויות שמורות לחן פלג 2021",
+    "en" : "All Rights reserved for Chen Peleg 2021 "
+}
+}
+}

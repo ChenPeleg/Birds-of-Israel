@@ -59,9 +59,7 @@ const PlayerComponent = () => {
 
     return (<div className={classes.root}>
 
-        {/* {choosenBird ? <audio controls autoPlay onPlay={onPlay} onAbort={onAbort} ><source src={birdSoundSrc} ref={audioRef} /> </audio> : null} */}
 
-        {choosenBird ? choosenBird.HebrewName : null}
     </div>)
 
 

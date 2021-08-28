@@ -37,13 +37,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 const BirdCardContainerLayout = () => {
 
-    //    const [lang, setLang] = useState('he');
+    const langDir = useSelector((state: { langDir: string }) => state.langDir);
     const classes = useStyles();
     // const [...allBirds]: Bird[] = getAllBirds();
     const allBirds: Bird[] = useSelector((state: { allBirds: Bird[] }) => state.allBirds);
 
     return (
-        <div dir={"rtl"} className={classes.mainContainer}>
+        <div dir={langDir} className={classes.mainContainer}>
             <AppHeader />
             <PlayerComponent />
             <Grid container spacing={3} className={classes.gridclass}>

@@ -2,8 +2,9 @@ import Bird from "../models/bird.model"
 import getAllBirds from '../hoc/getbirdsdata'
 import { Language } from "../models/languageEnumb";
 interface BirdStore {
-    Language: Language,
+    language: Language,
     lang: 'עב' | 'EN',
+    langDir: 'ltr' | 'rtl',
     filePlaying: string | null,
     isPlaying: boolean,
     choosenBird: Bird | null,
@@ -14,8 +15,9 @@ interface BirdStore {
 const [...allBirds]: Bird[] = getAllBirds();
 
 const initialState: BirdStore = {
-    Language: Language.he,
+    language: Language.he,
     lang: 'עב',
+    langDir: 'rtl',
     filePlaying: null,
     isPlaying: false,
     choosenBird: null,
@@ -33,9 +35,13 @@ const reducer = (state = initialState, action: any) => {
 
         case "LANG_HEB":
             newState.lang = 'עב';
+            newState.langDir = 'rtl';
+            newState.language = Language.he;
             break;
         case "LANG_EN":
             newState.lang = 'EN';
+            newState.langDir = 'ltr';
+            newState.language = Language.en;
             break;
         case "CLICK_BIRD":
             newState.allBirds = newState.allBirds.map((bird: Bird) => {
@@ -52,6 +58,8 @@ const reducer = (state = initialState, action: any) => {
         case "SET_CURRENT_AUDIO_REF":
             newState.audioElement = action.audioElement
             newState.filePlaying = action.filePlaying
+            break;
+        case "STOP_SOUND":
             break;
         default:
             break;
