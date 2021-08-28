@@ -1,11 +1,11 @@
 import React, { Dispatch } from "react";
-import { Box, Button, Icon, Theme } from "@material-ui/core";
+import { Box, Button, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import Bird from "../models/bird.model";
-import { AccessAlarm, Stop } from '@material-ui/icons';
+import { Stop } from '@material-ui/icons';
 import { Language } from "../models/languageEnumb";
-import { translate } from "../hoc/translateService";
+
 //import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 
 const useStyles: any = makeStyles(

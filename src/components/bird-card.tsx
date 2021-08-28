@@ -49,7 +49,7 @@ export const BirdCard = (props: { bird: Bird }) => {
     return (<div>
 
         <Card raised={rais} className={classes.cardBase}
-            // height="30vh"
+
             onMouseEnter={mouseEneter} onMouseLeave={mouseLeave} onClick={() => clickHandler(props.bird)} >
             <CardMedia><BirdPhoto imageSource={props.bird.img} /> </CardMedia>
 

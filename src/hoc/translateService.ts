@@ -8,8 +8,8 @@ const getlanguageStrings = (): any => {
 }
 const languageStrings = getlanguageStrings();
 
-export const translate = (lang: Language, text: "header" | "copyRight") => {
-    let textObj: { "he": string, en: string } = languageStrings[text];
+export const translate = (lang: Language, text: "header" | "Copyright") => {
+    let textObj: { "he": string, "en": string } = languageStrings[text];
     switch (lang) {
         case Language.he:
             return textObj['he']

@@ -34,9 +34,7 @@ const PlayerComponent = () => {
     const dispatch: Dispatch<any> = useDispatch();
 
     const classes = useStyles();
-    const onPlay = (audioElement: HTMLAudioElement, filePlaying: string) => {
-        dispatch({ type: 'SET_CURRENT_AUDIO_REF', audioElement: audioElement, filePlaying: filePlaying });
-    }
+
 
     // const onAbort = (seconds: any) => {
     //     dispatch({ type: 'CURRENT_AUDIO_STOPPED', seconds });
