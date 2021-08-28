@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/Birds-of-Israel/static/css/main.d642c363.chunk.css",
-    "main.js": "/Birds-of-Israel/static/js/main.078a910c.chunk.js",
-    "main.js.map": "/Birds-of-Israel/static/js/main.078a910c.chunk.js.map",
-    "runtime-main.js": "/Birds-of-Israel/static/js/runtime-main.c61c689a.js",
-    "runtime-main.js.map": "/Birds-of-Israel/static/js/runtime-main.c61c689a.js.map",
-    "static/js/2.d8ebce35.chunk.js": "/Birds-of-Israel/static/js/2.d8ebce35.chunk.js",
-    "static/js/2.d8ebce35.chunk.js.map": "/Birds-of-Israel/static/js/2.d8ebce35.chunk.js.map",
-    "static/js/3.fc89bce3.chunk.js": "/Birds-of-Israel/static/js/3.fc89bce3.chunk.js",
-    "static/js/3.fc89bce3.chunk.js.map": "/Birds-of-Israel/static/js/3.fc89bce3.chunk.js.map",
+    "main.css": "/Birds-of-Israel/static/css/main.4056aed2.chunk.css",
+    "main.js": "/Birds-of-Israel/static/js/main.f4e944fb.chunk.js",
+    "main.js.map": "/Birds-of-Israel/static/js/main.f4e944fb.chunk.js.map",
+    "runtime-main.js": "/Birds-of-Israel/static/js/runtime-main.a69bbb2b.js",
+    "runtime-main.js.map": "/Birds-of-Israel/static/js/runtime-main.a69bbb2b.js.map",
+    "static/js/2.89a4eb28.chunk.js": "/Birds-of-Israel/static/js/2.89a4eb28.chunk.js",
+    "static/js/2.89a4eb28.chunk.js.map": "/Birds-of-Israel/static/js/2.89a4eb28.chunk.js.map",
+    "static/js/3.4a52ed85.chunk.js": "/Birds-of-Israel/static/js/3.4a52ed85.chunk.js",
+    "static/js/3.4a52ed85.chunk.js.map": "/Birds-of-Israel/static/js/3.4a52ed85.chunk.js.map",
     "index.html": "/Birds-of-Israel/index.html",
-    "static/css/main.d642c363.chunk.css.map": "/Birds-of-Israel/static/css/main.d642c363.chunk.css.map",
-    "static/js/2.d8ebce35.chunk.js.LICENSE.txt": "/Birds-of-Israel/static/js/2.d8ebce35.chunk.js.LICENSE.txt",
-    "static/media/Blackbird.mp3": "/Birds-of-Israel/static/media/Blackbird.b587dded.mp3",
+    "static/css/main.4056aed2.chunk.css.map": "/Birds-of-Israel/static/css/main.4056aed2.chunk.css.map",
+    "static/js/2.89a4eb28.chunk.js.LICENSE.txt": "/Birds-of-Israel/static/js/2.89a4eb28.chunk.js.LICENSE.txt",
+    "static/media/BarnSwallow.mp3": "/Birds-of-Israel/static/media/BarnSwallow.811ffd79.mp3",
+    "static/media/Blackbird.mp3": "/Birds-of-Israel/static/media/Blackbird.339750c4.mp3",
+    "static/media/Great_Spotted_Cuckoo.mp3": "/Birds-of-Israel/static/media/Great_Spotted_Cuckoo.4f6732e5.mp3",
     "static/media/HouseSparrow.mp3": "/Birds-of-Israel/static/media/HouseSparrow.f0da94d7.mp3",
     "static/media/SyrianWoodpecker.mp3": "/Birds-of-Israel/static/media/SyrianWoodpecker.1240443a.mp3",
+    "static/media/barnSwallow.jpg": "/Birds-of-Israel/static/media/barnSwallow.aef1e76d.jpg",
     "static/media/crow.jpg": "/Birds-of-Israel/static/media/crow.27c77807.jpg",
-    "static/media/crow.mp3": "/Birds-of-Israel/static/media/crow.b0828a81.mp3",
+    "static/media/crow.mp3": "/Birds-of-Israel/static/media/crow.7ad3136f.mp3",
     "static/media/drara.jpg": "/Birds-of-Israel/static/media/drara.02d10bf0.jpg",
     "static/media/drara.mp3": "/Birds-of-Israel/static/media/drara.a542f7b3.mp3",
     "static/media/nakar.jpg": "/Birds-of-Israel/static/media/nakar.6d86aad6.jpg",
@@ -25,9 +28,9 @@
     "static/media/shahrur.jpg": "/Birds-of-Israel/static/media/shahrur.add94fcf.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c61c689a.js",
-    "static/js/2.d8ebce35.chunk.js",
-    "static/css/main.d642c363.chunk.css",
-    "static/js/main.078a910c.chunk.js"
+    "static/js/runtime-main.a69bbb2b.js",
+    "static/js/2.89a4eb28.chunk.js",
+    "static/css/main.4056aed2.chunk.css",
+    "static/js/main.f4e944fb.chunk.js"
   ]
 }
