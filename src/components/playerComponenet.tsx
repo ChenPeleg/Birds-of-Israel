@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+const soundModules = import.meta.glob('../assets/sounds/**/*', { eager: true, query: '?url', import: 'default' });
 const createAllBirdAudio = (): BirdAudio[] => {
-    const assets = require.context('../assets/sounds', true);
-    const loadSound = (fileName: string) => (assets(`./${fileName}`).default);
+    const loadSound = (fileName: string): string => soundModules[`../assets/sounds/${fileName}`] as string;
     return getAllBirds().map((bird: Bird) => {
         const birdAudioElement: HTMLAudioElement = new Audio(loadSound(bird.mainSound));
         return {
