@@ -6,9 +6,9 @@ type AppProps = {
 };
 const styles: any = scss
 
+const imageModules = import.meta.glob('../assets/images/**/*', { eager: true, query: '?url', import: 'default' });
+
 export const BirdPhoto: FC<AppProps> = (props: AppProps) => {
-    const assets = require.context('../assets/images', true);
-    const loadImage = (imageName: string) =>
-        (assets(`./${imageName}`).default);
+    const loadImage = (imageName: string): string => imageModules[`../assets/images/${imageName}`] as string;
     return (<img className={styles['birdphoto']} src={loadImage(props.imageSource)} alt="crow" />)
 }
