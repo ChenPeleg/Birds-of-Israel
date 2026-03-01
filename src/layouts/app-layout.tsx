@@ -1,16 +1,10 @@
 import React from 'react'
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import BirdCardContainerLayout from './birrd-card-container-layout';
 import { AppCopyright } from '../components/app-copyright';
 import { theme1 } from '../hoc/themes';
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1
-    },
-
-}));
 export const AppLayout = () => {
 
     return (
