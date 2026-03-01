@@ -1,15 +1,9 @@
 import React, { Dispatch } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
 import Bird from '../models/bird.model'
 import { useDispatch, useSelector } from 'react-redux';
 import getAllBirds from '../hoc/getbirdsdata'
 
 interface BirdAudio { birdId: number, audioElement: HTMLAudioElement }
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1
-    },
-}));
 
 
 const soundModules = import.meta.glob('../assets/sounds/**/*', { eager: true, query: '?url', import: 'default' });
@@ -32,8 +26,6 @@ const PlayerComponent = () => {
     const stopBirdId = useSelector((state: { stopBirdId: number }) => state.stopBirdId);
 
     const dispatch: Dispatch<any> = useDispatch();
-
-    const classes = useStyles();
 
 
     // const onAbort = (seconds: any) => {
@@ -66,7 +58,7 @@ const PlayerComponent = () => {
 
 
 
-    return (<div className={classes.root}>
+    return (<div style={{ flexGrow: 1 }}>
 
 
     </div>)
