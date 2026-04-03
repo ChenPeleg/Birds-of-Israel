@@ -43,7 +43,7 @@ const PlayerComponent = () => {
             })
             const audioToPlay: BirdAudio | undefined = allBirdsAudio.find((birdAudio: BirdAudio) => birdAudio.birdId === chosenBird.id);
             if (audioToPlay?.audioElement) {
-                audioToPlay.audioElement.play().then(_ => {
+                audioToPlay.audioElement.play().then(() => {
                     dispatch({ type: STARTED_PLAYING, filePlaying: chosenBird.mainSound })
                 });
             }
