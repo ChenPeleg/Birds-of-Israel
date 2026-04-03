@@ -5,7 +5,3 @@ const getAllBirds = (): any[] => {
 }
 
 export default getAllBirds;
-
-
-
-

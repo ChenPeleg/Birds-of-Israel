@@ -3,7 +3,7 @@ import React from 'react'
 import Grid from '@mui/material/Grid';
 import AppHeader from '../components/app-header';
 import Bird from '../models/bird.model'
-import PlayerComponent from '../components/playerComponenet';
+import PlayerComponent from '../components/playerComponent';
 import { useSelector } from 'react-redux';
 import { BirdCard } from '../components/bird-card';
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { ThemeProvider } from '@mui/material/styles';
-import BirdCardContainerLayout from './birrd-card-container-layout';
+import BirdCardContainerLayout from './bird-card-container-layout';
 import { AppCopyright } from '../components/app-copyright';
-import { theme1 } from '../hoc/themes';
+import { theme1 } from '../styles/themes';
 
 
 export const AppLayout = () => {

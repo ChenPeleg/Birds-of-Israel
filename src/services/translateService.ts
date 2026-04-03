@@ -1,5 +1,5 @@
-import { Language } from '../models/languageEnumb';
-import appData from './appData.json'
+import { Language } from '../models/languageEnum';
+import appData from '../data/appData.json'
 
 
 
@@ -18,5 +18,3 @@ export const translate = (lang: Language, text: "header" | "Copyright") => {
     }
 
 }
-
-

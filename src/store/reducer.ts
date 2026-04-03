@@ -1,15 +1,23 @@
 import Bird from "../models/bird.model"
-import getAllBirds from '../hoc/getbirdsdata'
-import { Language } from "../models/languageEnumb";
+import getAllBirds from '../data/getBirdsData'
+import { Language } from "../models/languageEnum";
+import { LANG_HEB, LANG_EN, CLICK_BIRD, STARTED_PLAYING, STOP_SOUND, SOUND_STOPPED } from './actionTypes';
+
+export type AppAction =
+    | { type: typeof LANG_HEB }
+    | { type: typeof LANG_EN }
+    | { type: typeof CLICK_BIRD; id: number }
+    | { type: typeof STARTED_PLAYING; filePlaying: string }
+    | { type: typeof STOP_SOUND; id: number }
+    | { type: typeof SOUND_STOPPED };
+
 interface BirdStore {
     language: Language,
-    lang: 'עב' | 'EN',
     langDir: 'ltr' | 'rtl',
     filePlaying: string | null,
     isPlaying: boolean,
-    choosenBird: Bird | null,
+    chosenBird: Bird | null,
     allBirds: Bird[],
-    audioElement: HTMLAudioElement | null,
     stopBirdId: number
 }
 
@@ -17,57 +25,51 @@ const [...allBirds]: Bird[] = getAllBirds();
 
 const initialState: BirdStore = {
     language: Language.he,
-    lang: 'עב',
     langDir: 'rtl',
     filePlaying: null,
     isPlaying: false,
-    choosenBird: null,
+    chosenBird: null,
     allBirds: allBirds,
-    audioElement: null,
     stopBirdId: 0
 }
 
 
-const reducer = (state = initialState, action: any) => {
+const reducer = (state = initialState, action: AppAction) => {
     let newState = {
         ...state
     }
-    //console.log(state, action)
     switch (action.type) {
 
-        case "LANG_HEB":
-            newState.lang = 'עב';
+        case LANG_HEB:
             newState.langDir = 'rtl';
             newState.language = Language.he;
             break;
-        case "LANG_EN":
-            newState.lang = 'EN';
+        case LANG_EN:
             newState.langDir = 'ltr';
             newState.language = Language.en;
             break;
-        case "CLICK_BIRD":
+        case CLICK_BIRD:
             newState.allBirds = newState.allBirds.map((bird: Bird) => {
                 let copiedBird = { ...bird }
                 if (action.id === copiedBird.id) {
-                    copiedBird.isChoosen = true;
-                    newState.choosenBird = bird;
+                    copiedBird.isChosen = true;
+                    newState.chosenBird = bird;
                 } else {
-                    copiedBird.isChoosen = false
+                    copiedBird.isChosen = false
                 }
                 return copiedBird
             })
             break;
-        case "STARTED_PLAYING":
+        case STARTED_PLAYING:
             newState.filePlaying = action.filePlaying;
             newState.isPlaying = true;
             break;
-        case "STOP_SOUND":
+        case STOP_SOUND:
             newState.stopBirdId = action.id
             break;
-        case "SOUND_STOPED":
+        case SOUND_STOPPED:
             newState.stopBirdId = 0;
             newState.isPlaying = false;
-
             break;
         default:
             break;
