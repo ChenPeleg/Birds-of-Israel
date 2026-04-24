@@ -1,19 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { translate } from "../hoc/translateService";
-import { Language } from "../models/languageEnumb";
+import { translate } from "../services/translateService";
+import { Language } from "../models/languageEnum";
 
 
 export const AppCopyright = (): JSX.Element => {
 
     const language = useSelector((state: { language: Language }) => state.language);
     const langDir = useSelector((state: { langDir: string }) => state.langDir);
-    const coptRightText = translate(language, "Copyright")
+    const copyrightText = translate(language, "Copyright")
 
     return (<div id="copyrights" dir={langDir} className="no-overflow">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &copy;
-        {coptRightText}
+        {copyrightText}
         &nbsp;&nbsp;&nbsp;
     </div>)
 }

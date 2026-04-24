@@ -10,7 +10,7 @@ const mockBird = {
     HebrewName: 'דרור',
     img: 'dror.jpg',
     mainSound: 'pashosh.mp3',
-    isChoosen: false,
+    isChosen: false,
     description: {
         en: 'A thick beak adapted for eating seeds.',
         he: 'מקור עבה המותאם לאכילת זרעים',
@@ -28,11 +28,11 @@ test('renders the bird Hebrew name by default', () => {
 });
 
 test('does not show description when bird is not chosen', () => {
-    renderWithStore(<BirdCard bird={{ ...mockBird, isChoosen: false }} />);
+    renderWithStore(<BirdCard bird={{ ...mockBird, isChosen: false }} />);
     expect(screen.queryByText(/מקור עבה המותאם לאכילת זרעים/)).not.toBeInTheDocument();
 });
 
 test('shows description when bird is chosen', () => {
-    renderWithStore(<BirdCard bird={{ ...mockBird, isChoosen: true }} />);
+    renderWithStore(<BirdCard bird={{ ...mockBird, isChosen: true }} />);
     expect(screen.getByText(/מקור עבה המותאם לאכילת זרעים/)).toBeInTheDocument();
 });
